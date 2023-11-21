@@ -40,8 +40,7 @@ DROP TABLE IF EXISTS `INT371`.`Skills` ;
 
 CREATE TABLE IF NOT EXISTS `INT371`.`Skills` (
   `skill_id` INT NOT NULL auto_increment,
-  `label` VARCHAR(45) NOT NULL,
-  `value` VARCHAR(45) NOT NULL,
+  `name` VARCHAR(45) NOT NULL,
   `description` VARCHAR(200) NULL DEFAULT NULL,
   `image_url` VARCHAR(255) NULL DEFAULT NULL,
   `level_id` INT NOT NULL,
@@ -63,8 +62,7 @@ DROP TABLE IF EXISTS `INT371`.`Careers` ;
 
 CREATE TABLE IF NOT EXISTS `INT371`.`Careers` (
   `career_id` INT NOT NULL auto_increment,
-  `label` VARCHAR(45) NOT NULL,
-  `value` VARCHAR(45) NOT NULL,
+  `name` VARCHAR(45) NOT NULL,
   `description` VARCHAR(255) NULL DEFAULT NULL,
   `short_desc` VARCHAR(50) NULL DEFAULT NULL,
   PRIMARY KEY (`career_id`),
@@ -79,8 +77,7 @@ DROP TABLE IF EXISTS `INT371`.`Categories` ;
 
 CREATE TABLE IF NOT EXISTS `INT371`.`Categories` (
   `category_id` INT NOT NULL auto_increment,
-  `label` VARCHAR(45) NOT NULL,
-  `value` VARCHAR(45) NOT NULL,
+  `name` VARCHAR(45) NOT NULL,
   `image_url` VARCHAR(255) NULL DEFAULT NULL,
   PRIMARY KEY (`category_id`),
   UNIQUE INDEX `field_id_UNIQUE` (`category_id` ASC) VISIBLE)
@@ -127,8 +124,7 @@ DROP TABLE IF EXISTS `INT371`.`Courses` ;
 
 CREATE TABLE IF NOT EXISTS `INT371`.`Courses` (
   `course_id` INT NOT NULL auto_increment,
-  `label` VARCHAR(100) NOT NULL,
-  `value` VARCHAR(100) NOT NULL,
+  `name` VARCHAR(100) NOT NULL,
   `description` VARCHAR(200) NULL DEFAULT NULL,
   `course_level` VARCHAR(45) NOT NULL,
   `learn_hours` VARCHAR(10) NULL,
