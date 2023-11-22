@@ -1,12 +1,11 @@
 use INT371;
 
-INSERT INTO Categories VALUES (1,"Website developer","web_dev","");
+INSERT INTO Categories VALUES (1,"Website developer","");
 
 INSERT INTO Careers
 VALUES (
         1,
         "Fullstack developer",
-        "fullstack_developer",
         "this is fullstack developer",
         ""
     );
@@ -15,7 +14,6 @@ INSERT INTO Careers
 VALUES (
         2,
         "Frontend developer",
-        "frontend_developer",
         "this is frontend developer",
         ""
     );
@@ -24,7 +22,6 @@ INSERT INTO Careers
 VALUES (
         3,
         "Backend developer",
-        "backend_developer",
         "Backend developer",
         ""
     );
@@ -41,7 +38,6 @@ INSERT INTO Skills
 VALUES (
         1,
         "Basic Java Skill",
-        "basic_java",
         "This is basic java skill",
         "",
         1
@@ -51,7 +47,6 @@ INSERT INTO Skills
 VALUES (
         2,
         "Basic Javascript Skill",
-        "basic_javascript",
         "This is basic javascript skill",
         "",
         1
@@ -61,7 +56,6 @@ INSERT INTO Skills
 VALUES (
         3,
         "Basic SSL Skill",
-        "basic_ssl",
         "This is basic ssl skill",
         "",
         1
@@ -73,7 +67,6 @@ INSERT INTO Skills
 VALUES (
         4,
         "Basic database Skill",
-        "basic_database",
         "This is basic database skill",
         "",
         3
@@ -83,7 +76,6 @@ INSERT INTO Skills
 VALUES (
         5,
         "Basic python Skill",
-        "basic_python",
         "This is basic python skill",
         "",
         2
@@ -101,7 +93,6 @@ INSERT INTO Courses
 VALUES (
         1,
         "INT101",
-        "int101",
         "This is INT101",
         "Basic",
         "10",
@@ -114,7 +105,6 @@ INSERT INTO Courses
 VALUES (
         2,
         "INT101",
-        "int202",
         "This is INT202",
         "Basic",
         "5",
@@ -127,7 +117,6 @@ INSERT INTO Courses
 VALUES (
         3,
         "INT303",
-        "int303",
         "This is INT303",
         "Basic",
         "5",
