@@ -1,8 +1,8 @@
 use INT371;
 
-INSERT INTO Categories VALUES (1,"Website developer","");
+INSERT INTO categories VALUES (1,"Website developer","");
 
-INSERT INTO Careers
+INSERT INTO careers
 VALUES (
         1,
         "Fullstack developer",
@@ -10,7 +10,7 @@ VALUES (
         ""
     );
 
-INSERT INTO Careers
+INSERT INTO careers
 VALUES (
         2,
         "Frontend developer",
@@ -18,7 +18,7 @@ VALUES (
         ""
     );
 
-INSERT INTO Careers
+INSERT INTO careers
 VALUES (
         3,
         "Backend developer",
@@ -26,15 +26,15 @@ VALUES (
         ""
     );
 
-INSERT INTO Categories_Careers VALUES(1,1,1);
+INSERT INTO categories_careers VALUES(1,1,1);
 
-INSERT INTO Levels VALUE(1,"Basic");
+INSERT INTO levels VALUE(1,"Basic");
 
-INSERT INTO Levels VALUE(2,"intermediate");
+INSERT INTO levels VALUE(2,"intermediate");
 
-INSERT INTO Levels VALUE(3,"advance");
+INSERT INTO levels VALUE(3,"advance");
 
-INSERT INTO Skills
+INSERT INTO skills
 VALUES (
         1,
         "Basic Java Skill",
@@ -43,7 +43,7 @@ VALUES (
         1
     );
 
-INSERT INTO Skills
+INSERT INTO skills
 VALUES (
         2,
         "Basic Javascript Skill",
@@ -52,7 +52,7 @@ VALUES (
         1
     );
 
-INSERT INTO Skills
+INSERT INTO skills
 VALUES (
         3,
         "Basic SSL Skill",
@@ -63,7 +63,7 @@ VALUES (
 
 -- Assuming 1 is the correct LevelID for "Basic" level
 
-INSERT INTO Skills
+INSERT INTO skills
 VALUES (
         4,
         "Basic database Skill",
@@ -72,7 +72,7 @@ VALUES (
         3
     );
 
-INSERT INTO Skills
+INSERT INTO skills
 VALUES (
         5,
         "Basic python Skill",
@@ -81,15 +81,15 @@ VALUES (
         2
     );
 
-INSERT INTO Careers_Skills VALUES(1,1,1);
+INSERT INTO careers_skills VALUES(1,1,1);
 
-INSERT INTO Careers_Skills VALUES(2,2,1);
+INSERT INTO careers_skills VALUES(2,2,1);
 
-INSERT INTO Organizations VALUES(1,"KMUTT","This is kmutt", "");
+INSERT INTO organizations VALUES(1,"KMUTT","This is kmutt", "");
 
-INSERT INTO Organizations VALUES(2,"KMITL","This is kmitl", "");
+INSERT INTO organizations VALUES(2,"KMITL","This is kmitl", "");
 
-INSERT INTO Courses
+INSERT INTO courses
 VALUES (
         1,
         "INT101",
@@ -101,7 +101,7 @@ VALUES (
         1
     );
 
-INSERT INTO Courses
+INSERT INTO courses
 VALUES (
         2,
         "INT101",
@@ -113,7 +113,7 @@ VALUES (
         1
     );
 
-INSERT INTO Courses
+INSERT INTO courses
 VALUES (
         3,
         "INT303",
