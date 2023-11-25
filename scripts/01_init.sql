@@ -218,9 +218,9 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `INT371`.`skills_courses` ;
 
 CREATE TABLE IF NOT EXISTS `INT371`.`skills_courses` (
-  `skill_id` INT NOT NULL auto_increment,
+  `skill_id` INT NOT NULL,
   `course_id` INT NOT NULL,
-  `skills_courses` VARCHAR(45) NOT NULL,
+  `skills_courses` INT(45) NOT NULL auto_increment,
   PRIMARY KEY (`skills_courses`),
   INDEX `fk_Skills_has_Courses_Courses1_idx` (`course_id` ASC) VISIBLE,
   INDEX `fk_Skills_has_Courses_Skills1_idx` (`skill_id` ASC) VISIBLE,
@@ -243,9 +243,9 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `INT371`.`categories_careers` ;
 
 CREATE TABLE IF NOT EXISTS `INT371`.`categories_careers` (
-  `category_id` INT NOT NULL auto_increment,
+  `category_id` INT NOT NULL,
   `career_id` INT NOT NULL,
-  `categories_careers_id` INT NOT NULL,
+  `categories_careers_id` INT NOT NULL auto_increment,
   PRIMARY KEY (`categories_careers_id`),
   INDEX `fk_Categories_has_Careers_Careers1_idx` (`career_id` ASC) VISIBLE,
   INDEX `fk_Categories_has_Careers_Categories1_idx` (`category_id` ASC) VISIBLE,
