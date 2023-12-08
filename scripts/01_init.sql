@@ -41,7 +41,7 @@ DROP TABLE IF EXISTS `INT371`.`skills` ;
 CREATE TABLE IF NOT EXISTS `INT371`.`skills` (
   `skill_id` INT NOT NULL auto_increment,
   `name` VARCHAR(45) NOT NULL,
-  `description` VARCHAR(200) NULL DEFAULT NULL,
+  `description` VARCHAR(500) NULL DEFAULT NULL,
   `image_url` VARCHAR(255) NULL DEFAULT NULL,
   `level_id` INT NOT NULL,
   PRIMARY KEY (`skill_id`),
@@ -63,7 +63,7 @@ DROP TABLE IF EXISTS `INT371`.`careers` ;
 CREATE TABLE IF NOT EXISTS `INT371`.`careers` (
   `career_id` INT NOT NULL auto_increment,
   `name` VARCHAR(45) NOT NULL,
-  `description` VARCHAR(255) NULL DEFAULT NULL,
+  `description` VARCHAR(500) NULL DEFAULT NULL,
   `short_desc` VARCHAR(50) NULL DEFAULT NULL,
   PRIMARY KEY (`career_id`),
   UNIQUE INDEX `carrer_id_UNIQUE` (`career_id` ASC) VISIBLE)
@@ -110,7 +110,7 @@ DROP TABLE IF EXISTS `INT371`.`organizations` ;
 CREATE TABLE IF NOT EXISTS `INT371`.`organizations` (
   `organization_id` INT NOT NULL auto_increment,
   `name` VARCHAR(45) NOT NULL,
-  `description` VARCHAR(200) NULL DEFAULT NULL,
+  `description` VARCHAR(500) NULL DEFAULT NULL,
   `image_url` VARCHAR(255) NULL DEFAULT NULL,
   PRIMARY KEY (`organization_id`),
   UNIQUE INDEX `skill_id_UNIQUE` (`organization_id` ASC) VISIBLE)
@@ -125,7 +125,7 @@ DROP TABLE IF EXISTS `INT371`.`courses` ;
 CREATE TABLE IF NOT EXISTS `INT371`.`courses` (
   `course_id` INT NOT NULL auto_increment,
   `name` VARCHAR(100) NOT NULL,
-  `description` VARCHAR(200) NULL DEFAULT NULL,
+  `description` VARCHAR(500) NULL DEFAULT NULL,
   `course_level` VARCHAR(45) NOT NULL,
   `learn_hours` VARCHAR(10) NULL,
   `academic_year` VARCHAR(45) NULL,
