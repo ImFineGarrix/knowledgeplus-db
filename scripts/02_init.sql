@@ -6,24 +6,21 @@ use INT371;
 -- VALUES (
 --         1,
 --         "Fullstack developer",
---         "this is fullstack developer",
---         ""
+--         "this is fullstack developer"
 --     );
 
 -- INSERT INTO careers
 -- VALUES (
 --         2,
 --         "Frontend developer",
---         "this is frontend developer",
---         ""
+--         "this is frontend developer"
 --     );
 
 -- INSERT INTO careers
 -- VALUES (
 --         3,
 --         "Backend developer",
---         "Backend developer",
---         ""
+--         "Backend developer"
 --     );
 
 -- INSERT INTO categories_careers VALUES(1,1,1);
