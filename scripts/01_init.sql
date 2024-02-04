@@ -104,14 +104,13 @@ CREATE TABLE IF NOT EXISTS `INT371`.`courses` (
   `organization_id` INT NOT NULL,
   PRIMARY KEY (`course_id`),
   UNIQUE INDEX `course_id_UNIQUE` (`course_id` ASC) VISIBLE,
-  INDEX `fk_Courses_ Organizations1_idx` (`organization_id` ASC) VISIBLE,
-  CONSTRAINT `fk_Courses_ Organizations1`
+  INDEX `fk_Courses_Organizations1_idx` (`organization_id` ASC) VISIBLE,
+  CONSTRAINT `fk_Courses_Organizations1`
     FOREIGN KEY (`organization_id`)
     REFERENCES `INT371`.`organizations` (`organization_id`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
+    ON UPDATE NO ACTION
+) ENGINE = InnoDB;
 
 -- -----------------------------------------------------
 -- Table `INT371`.`careers_skills`
@@ -156,8 +155,8 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `INT371`.`skills_levels` ;
 
 CREATE TABLE IF NOT EXISTS `INT371`.`skills_levels` (
-  `skills_levels_id` INT NOT NULL,
-  `skill_id` INT NOT NULL,
+  `skills_levels_id` INT NOT NULL AUTO_INCREMENT,
+  `skill_id` INT NULL,
   `knowledge_desc` LONGTEXT NULL,
   `ability_desc` LONGTEXT NULL,
   `levels_id` INT NOT NULL,
@@ -180,8 +179,8 @@ CREATE TABLE IF NOT EXISTS `INT371`.`skills_levels` (
     FOREIGN KEY (`course_id`)
     REFERENCES `INT371`.`courses` (`course_id`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+    ON UPDATE NO ACTION
+) ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -190,7 +189,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `INT371`.`groups` ;
 
 CREATE TABLE IF NOT EXISTS `INT371`.`groups` (
-  `group_id` INT NOT NULL,
+  `group_id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`group_id`))
 ENGINE = InnoDB;
@@ -202,7 +201,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `INT371`.`sections_groups` ;
 
 CREATE TABLE IF NOT EXISTS `INT371`.`sections_groups` (
-  `sections_groups_id` INT NOT NULL,
+  `sections_groups_id` INT NOT NULL AUTO_INCREMENT,
   `section_id` INT NOT NULL,
   `group_id` INT NOT NULL,
   PRIMARY KEY (`sections_groups_id`),
@@ -227,7 +226,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `INT371`.`groups_careers` ;
 
 CREATE TABLE IF NOT EXISTS `INT371`.`groups_careers` (
-  `groups_careers_id` INT NOT NULL,
+  `groups_careers_id` INT NOT NULL AUTO_INCREMENT,
   `group_id` INT NOT NULL,
   `career_id` INT NOT NULL,
   PRIMARY KEY (`groups_careers_id`),
@@ -253,7 +252,7 @@ USE `INT371_02` ;
 DROP TABLE IF EXISTS `INT371_02`.`users` ;
 
 CREATE TABLE IF NOT EXISTS `INT371_02`.`users` (
-  `user_id` INT NOT NULL,
+  `user_id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) NOT NULL,
   `email` VARCHAR(100) NOT NULL,
   `password` VARCHAR(200) NOT NULL,
