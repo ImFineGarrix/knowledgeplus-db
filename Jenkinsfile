@@ -27,7 +27,6 @@ pipeline {
                           --name mysql-container-dev \
                           -e MYSQL_ROOT_PASSWORD=cp23sj2 \
                           -e MYSQL_DATABASE=INT371 \
-                          -v ./scripts:/docker-entrypoint-initdb.d/ \
                           -p 3306:3306 \
                           --network dev \
                           --restart always \
