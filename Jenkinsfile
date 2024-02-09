@@ -2,35 +2,35 @@ pipeline {
     agent any
 
     stages {
-        stage('Remove Old MySQL Container') {
+        stage('Remove') {
             steps {
                 script {
-                    sh 'docker rm -f mysql-container-dev || true'
+                    sh 'docker rm -f mysql-container-${ENV} || true'
                     sh 'docker image prune -af'
                 }
             }
         }
 
-        stage('Build MySQL Docker Image') {
+        stage('Build') {
             steps {
                 script {
-                    sh 'docker build -t sj2mysql-dev:latest .'
+                    sh 'docker build -t sj2mysql-${ENV}:latest .'
                 }
             }
         }
 
-        stage('Deploy MySQL Container') {
+        stage('Deploy') {
             steps {
                 script {
                     sh '''
                         docker run -d \
-                          --name mysql-container-dev \
+                          --name mysql-container-${ENV} \
                           -e MYSQL_ROOT_PASSWORD=cp23sj2 \
                           -e MYSQL_DATABASE=INT371 \
                           -p 3306:3306 \
-                          --network dev \
+                          --network ${ENV} \
                           --restart always \
-                          sj2mysql-dev:latest
+                          sj2mysql-${ENV}:latest
                     '''
                 }
             }
