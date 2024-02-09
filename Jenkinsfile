@@ -1,6 +1,7 @@
 pipeline {
     agent any
 
+    stages {
         stage('Remove Old MySQL Container') {
             steps {
                 script {
@@ -10,7 +11,6 @@ pipeline {
             }
         }
 
-    stages {
         stage('Build MySQL Docker Image') {
             steps {
                 script {
