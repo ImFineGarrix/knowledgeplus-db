@@ -31,7 +31,7 @@ pipeline {
                           -p 3306:3306 \
                           --network dev \
                           --restart always \
-                          sj2mysqldev:latest
+                          sj2mysql-dev:latest
                     '''
                 }
             }
