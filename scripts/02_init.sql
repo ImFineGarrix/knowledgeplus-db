@@ -10,7 +10,7 @@ INSERT INTO levels VALUE(8,"Intermediate");
 INSERT INTO levels VALUE(9,"Advanced");
 
 insert into sections value(1,"Information Technology",null);
-insert into int371.groups value(1,"Product Development");
+insert into INT371.groups value(1,"Product Development");
 insert into organizations value(1,"KMUTT","มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี",null);
 insert into careers value(1,"Front End Developer","The Front End Developer writes clean testable codes and develops client-side systems to support end user’s needs and experience. He/She gathers user feedback to propose improvements to the product’s interface. He provides technical support to develop an intuitive and responsive experience for end users. He supports usability testing to validate user interfaces. He also identifies security vulnerabilities and assists his senior in selecting security tools to aid his senior in addressing these vulnerabilities.
 He works in a team and is proficient in programming languages required by the organisation to design and develop user interfaces. He is familiar with graphic designing tools and is also knowledgeable in commonly used design methods. He uses various tools to read codes and uncover security vulnerabilities.
