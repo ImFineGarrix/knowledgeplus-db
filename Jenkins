@@ -4,8 +4,8 @@ pipeline {
         stage('Remove Old MySQL Container') {
             steps {
                 script {
-                    sh 'sudo docker rm -f mysql-container-dev || true'
-                    sh 'sudo docker image prune -af'
+                    sh 'docker rm -f mysql-container-dev || true'
+                    sh 'docker image prune -af'
                 }
             }
         }
@@ -14,7 +14,7 @@ pipeline {
         stage('Build MySQL Docker Image') {
             steps {
                 script {
-                    sh 'sudo docker build -t sj2mysql-dev:latest .'
+                    sh 'docker build -t sj2mysql-dev:latest .'
                 }
             }
         }
@@ -23,7 +23,7 @@ pipeline {
             steps {
                 script {
                     sh '''
-                        sudo docker run -d \
+                        docker run -d \
                           --name mysql-container-dev \
                           -e MYSQL_ROOT_PASSWORD=cp23sj2 \
                           -e MYSQL_DATABASE=INT371 \
