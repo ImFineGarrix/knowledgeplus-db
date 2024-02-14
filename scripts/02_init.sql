@@ -25,3 +25,5 @@ INSERT INTO levels VALUE(9,"Advanced");
 -- insert into sections_groups value(1,1,1);
 -- insert into groups_careers value(1,1,1);
 -- insert into careers_skills value(1,1,1);
+
+insert into INT371_02.users value(1,"Knowledge+","Knowledgeplus@mail.kmutt.ac.th","$2a$10$/hGwW2dC8JVobtGhQqQWQet9/d4qNkwbs1b.Nc/.N/r7B3ldOcbWu","owner");
