@@ -34,7 +34,7 @@ insert into careers value(1,"Front End Developer","The Front End Developer write
 He works in a team and is proficient in programming languages required by the organisation to design and develop user interfaces. He is familiar with graphic designing tools and is also knowledgeable in commonly used design methods. He uses various tools to read codes and uncover security vulnerabilities.
 The Front End Developer is innovative in designing compelling and intuitive user interfaces. He supports others in the team and is confident in communicating ideas to the team in a clear and compelling manner.");
 insert into organizations value(1,"KMUTT","มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี",null);
-INSERT INTO Skills VALUE(1,"Applications Development",
+INSERT INTO skills VALUE(1,"Applications Development",
 "Develop applications based on the design specifications; encompassing coding, testing, debugging, documenting and reviewing and/or refining it across the application development stages in accordance with defined standards for development and security. The complexity of the application may range from a basic application to a context-aware and/or augmented reality application that incorporates predictive behaviour analytics, geo-spatial capabilities and other appropriate algorithms. The technical skill includes the analysis and possibly the reuse, improvement, reconfiguration, addition or integration of existing and/or new application components.",null,"HARD");
 
 insert into sections_groups value(1,1,1);
