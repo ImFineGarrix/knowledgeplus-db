@@ -27,7 +27,7 @@ pipeline {
                           --name mysql-container-${ENV} \
                           -e MYSQL_ROOT_PASSWORD=cp23sj2 \
                           -e MYSQL_DATABASE=INT371 \
-                          -p 3306:3306 \
+                          -p :3306 \
                           --network ${ENV} \
                           --restart always \
                           sj2mysql-${ENV}:latest
