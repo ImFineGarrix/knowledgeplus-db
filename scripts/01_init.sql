@@ -273,13 +273,29 @@ USE `INT371_02` ;
 DROP TABLE IF EXISTS `INT371_02`.`users` ;
 
 CREATE TABLE IF NOT EXISTS `INT371_02`.`users` (
-  `user_id` INT NOT NULL,
+  `user_id` INT NOT NULL auto_increment,
   `name` VARCHAR(255) NOT NULL,
   `email` VARCHAR(100) NOT NULL,
   `password` VARCHAR(200) NOT NULL,
   `role` ENUM("owner","admin") NOT NULL,
   PRIMARY KEY (`user_id`))
 ENGINE = InnoDB;
+
+CREATE ROLE owner_role;
+CREATE ROLE admin_role;
+CREATE ROLE user_role;
+
+CREATE USER 'db_owner'@'localhost' IDENTIFIED BY 'ownersj2';
+CREATE USER 'db_admin'@'localhost' IDENTIFIED BY 'adminsj2';
+CREATE USER 'db_user'@'localhost' IDENTIFIED BY 'usersj2';
+USE `INT371`;
+GRANT SELECT, INSERT, UPDATE, DELETE ON INT371.* TO 'db_owner'@'localhost';
+GRANT SELECT, INSERT, UPDATE, DELETE ON INT371.* TO 'db_admin'@'localhost';
+GRANT SELECT ON INT371.* TO 'db_user'@'localhost';
+USE `INT371_02`;
+GRANT SELECT, INSERT, UPDATE, DELETE ON INT371_02.* TO 'db_owner'@'localhost';
+GRANT SELECT ON INT371_02.* TO 'db_admin'@'localhost';
+GRANT SELECT ON INT371_02.* TO 'db_user'@'localhost';
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
