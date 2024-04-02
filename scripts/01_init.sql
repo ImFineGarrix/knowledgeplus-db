@@ -103,7 +103,7 @@ CREATE TABLE IF NOT EXISTS `INT371`.`courses` (
   `course_type` VARCHAR(45) NULL DEFAULT NULL,
   `course_link` LONGTEXT NULL DEFAULT NULL,
   `organization_id` INT NOT NULL,
-  `learning_outcome` LONGTEXT NULL,
+`learning_outcome` LONGTEXT NULL,
   PRIMARY KEY (`course_id`),
   UNIQUE INDEX `course_id_UNIQUE` (`course_id` ASC) VISIBLE,
   INDEX `fk_Courses_ Organizations1_idx` (`organization_id` ASC) VISIBLE,
