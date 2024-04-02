@@ -2,17 +2,17 @@ CREATE ROLE owner_role;
 CREATE ROLE admin_role;
 CREATE ROLE user_role;
 
-CREATE USER 'db_owner'@'mysql-container-dev' IDENTIFIED BY 'ownersj2';
-CREATE USER 'db_admin'@'mysql-container-dev' IDENTIFIED BY 'adminsj2';
-CREATE USER 'db_user'@'mysql-container-dev' IDENTIFIED BY 'usersj2';
+CREATE USER 'db_owner'@'localhost' IDENTIFIED BY 'ownersj2';
+CREATE USER 'db_admin'@'localhost' IDENTIFIED BY 'adminsj2';
+CREATE USER 'db_user'@'localhost' IDENTIFIED BY 'usersj2';
 USE `INT371`;
-GRANT SELECT, INSERT, UPDATE, DELETE ON INT371.* TO 'db_owner'@'mysql-container-dev';
-GRANT SELECT, INSERT, UPDATE, DELETE ON INT371.* TO 'db_admin'@'mysql-container-dev';
+GRANT SELECT, INSERT, UPDATE, DELETE ON INT371.* TO 'db_owner'@'localhost';
+GRANT SELECT, INSERT, UPDATE, DELETE ON INT371.* TO 'db_admin'@'localhost';
 GRANT SELECT ON INT371.* TO 'db_user'@'localhost';
 USE `INT371_02`;
-GRANT SELECT, INSERT, UPDATE, DELETE ON INT371_02.* TO 'db_owner'@'mysql-container-dev';
-GRANT SELECT ON INT371_02.* TO 'db_admin'@'mysql-container-dev';
-GRANT SELECT ON INT371_02.* TO 'db_user'@'mysql-container-dev';
+GRANT SELECT, INSERT, UPDATE, DELETE ON INT371_02.* TO 'db_owner'@'localhost';
+GRANT SELECT ON INT371_02.* TO 'db_admin'@'localhost';
+GRANT SELECT ON INT371_02.* TO 'db_user'@'localhost';
 
 FLUSH PRIVILEGES;
 
